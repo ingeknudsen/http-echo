@@ -9,10 +9,10 @@ spec:
         from: master
   components:
     - name: echo
-      src: .
+      image: inanimate/echo-server
       ports:
         - name: http
-          port: 5678
+          port: 8080
       publicPort: http
   dnsAppAlias:
     environment: prod
