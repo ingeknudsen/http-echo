@@ -13,6 +13,7 @@ spec:
       ports:
         - name: http
           port: 5678
+      publicPort: http
   dnsAppAlias:
     environment: prod
     component: echo
