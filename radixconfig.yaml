@@ -1,0 +1,18 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: http-echo
+spec:
+  environments:
+    - name: prod
+      build:
+        from: master
+  components:
+    - name: echo
+      src: .
+      ports:
+        - name: http
+          port: 5678
+  dnsAppAlias:
+    environment: prod
+    component: echo
